@@ -25,6 +25,9 @@ public class LibraryManagementSystem {
         library.viewAvailableBooks().forEach((isbn, book) -> {
             System.out.println(book.getTitle() + " by " + book.getAuthor());
         });
+
+        // Running manual tests
+        ManualTest.runAllTests();
     }
 }
 
