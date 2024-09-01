@@ -34,4 +34,12 @@ public class Book {
     public boolean isAvailable() {
         return isAvailable;
     }
+
+    public void borrowBook() {
+        if (isAvailable) {
+            isAvailable = false;
+        } else {
+            throw new IllegalStateException("Book is not available for borrowing.");
+        }
+    }
 }
