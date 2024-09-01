@@ -48,4 +48,12 @@ public class ManualTest {
         library.addBook(book);
         assertEqual(book, library.viewAvailableBooks().get("1234567890"), "testAddBook - Check added book");
     }
+
+    public static void testBorrowBookFromLibrary() {
+        Library library = new Library();
+        Book book = new Book("1234567890", "Test Book", "Test Author", 2021);
+        library.addBook(book);
+        library.borrowBook("1234567890");
+        assertEqual(false, book.isAvailable(), "testBorrowBookFromLibrary - Availability after borrow");
+    }
 }
