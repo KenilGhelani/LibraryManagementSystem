@@ -10,7 +10,13 @@ public class LibraryManagementSystem {
 
         library.addBook(book1);
         library.addBook(book2);
+
+        // Borrow a book
+        try {
+            library.borrowBook("978-3-16-148410-0");
+        } catch (IllegalStateException e) {
+            System.out.println(e.getMessage());
+        }
     }
 }
-
 
