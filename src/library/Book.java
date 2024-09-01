@@ -42,4 +42,7 @@ public class Book {
             throw new IllegalStateException("Book is not available for borrowing.");
         }
     }
+    public void returnBook() {
+        isAvailable = true;
+    }
 }
