@@ -17,6 +17,9 @@ public class LibraryManagementSystem {
         } catch (IllegalStateException e) {
             System.out.println(e.getMessage());
         }
+
+        // Return a book
+        library.returnBook("978-3-16-148410-0");
     }
 }
 
