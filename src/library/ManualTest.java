@@ -41,4 +41,11 @@ public class ManualTest {
         book.returnBook();
         assertEqual(true, book.isAvailable(), "testReturnBook - Availability after return");
     }
+
+    public static void testAddBook() {
+        Library library = new Library();
+        Book book = new Book("1234567890", "Test Book", "Test Author", 2021);
+        library.addBook(book);
+        assertEqual(book, library.viewAvailableBooks().get("1234567890"), "testAddBook - Check added book");
+    }
 }
