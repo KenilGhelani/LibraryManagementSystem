@@ -56,4 +56,13 @@ public class ManualTest {
         library.borrowBook("1234567890");
         assertEqual(false, book.isAvailable(), "testBorrowBookFromLibrary - Availability after borrow");
     }
+
+    public static void testReturnBookToLibrary() {
+        Library library = new Library();
+        Book book = new Book("1234567890", "Test Book", "Test Author", 2021);
+        library.addBook(book);
+        library.borrowBook("1234567890");
+        library.returnBook("1234567890");
+        assertEqual(true, book.isAvailable(), "testReturnBookToLibrary - Availability after return");
+    }
 }
