@@ -20,6 +20,11 @@ public class LibraryManagementSystem {
 
         // Return a book
         library.returnBook("978-3-16-148410-0");
+
+        // View available books
+        library.viewAvailableBooks().forEach((isbn, book) -> {
+            System.out.println(book.getTitle() + " by " + book.getAuthor());
+        });
     }
 }
 
