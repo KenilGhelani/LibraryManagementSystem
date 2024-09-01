@@ -65,4 +65,13 @@ public class ManualTest {
         library.returnBook("1234567890");
         assertEqual(true, book.isAvailable(), "testReturnBookToLibrary - Availability after return");
     }
+
+    private static void assertEqual(Object expected, Object actual, String testName) {
+        if (expected.equals(actual)) {
+            System.out.println(testName + " - Passed");
+        } else {
+            System.out.println(testName + " - Failed: Expected [" + expected + "] but got [" + actual + "]");
+        }
+    }
+
 }
