@@ -34,4 +34,11 @@ public class ManualTest {
             System.out.println("testBorrowBookWhenNotAvailable - Passed");
         }
     }
+
+    public static void testReturnBook() {
+        Book book = new Book("1234567890", "Test Book", "Test Author", 2021);
+        book.borrowBook();
+        book.returnBook();
+        assertEqual(true, book.isAvailable(), "testReturnBook - Availability after return");
+    }
 }
